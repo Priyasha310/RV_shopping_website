@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title> RV Stop</title>
+        <link rel = "icon" href = "/photos/logo2.png" type = "image/x-icon">
+        <link href="css/home.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <header>
+        <div class = "navbar">
+            <a href = "/"><i class="fa fa-home"></i> Home </a>
+            <a href = "/cart"><i class="fa fa-shopping-cart" style="font-size:20px"></i>&nbsp; Cart <span id="cart-count"> 0 </span> </a>
+            <a href = "/wishlist"><i class="fa fa-heart" style="font-size:19px;"></i> Wishlist </a>
+            <a href = "/contact"><i class="fa fa-phone" style="font-size:20px"></i>&nbsp; Contact </a>
+            <a href = "/faq"><i class="fa fa-question-circle" style="font-size:20px"></i> FAQ </a>
+        </div>
+    </header>
+    <body>
+        <div><a href = "/product"><img src="photos/home2.jpg"></a></div>
+        
+        <a href = "/product"><img src="photos/f_look.webp"></a>
+        <a href = "#"><img src = "photos/m_look.webp"></a>
+        <div class="category">
+            <div class = "card"><a href = "/hoodies"><img src = "photos/hoodies.jpg" width = "100%" >
+                <div class = "cname"><p>Hoodies and Sweatshirts</p></a></div>
+            </div>
+            <div class = "card"><a href = "#"><img src = "photos/T-shirt.jpg" width = "100%" >
+                <div class = "cname"><p>T-shirt Collections</p></a></div>
+            </div>
+            <div class = "card"><a href = "/dresses"><img src = "photos/dress.jpg" width = "100%" >
+                <div class = "cname"><p>Dresses</p></a></div>
+            </div> 
+        </div>
+        <%- include("partials/footer"); -%>
+        <script src = "/cart.js"></script>        
+    </body>
+</html>

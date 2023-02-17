@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
+         url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+html, body{
+    font-family: Raleway;
+    background-color: rgb(193, 224, 228);
+}
+*{margin: 0;
+    box-sizing: border-box;}
+.navbar { 
+    width: 100%;
+    background-color: #a1a1a1;
+    overflow: hidden;
+    position: fixed;
+} 
+.navbar a{
+    text-decoration: none;
+    font-size: 20px;
+    float: left;
+    text-align: center;
+    padding:  12px;
+    color: white;
+    width: 20%;
+}
+.navbar a:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 1.5em;
+}
+textarea{
+    width :80%;
+    height: 80px;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 5px; 
+    overflow: hidden;
+}
+.main{
+    padding: 13px;
+    font-size: 23px;
+    text-align: center;
+}
+#mail_bar, #name_bar{
+    height: 35px;
+    width: 350px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 3px
+}
+.btn_smt, .btn_rst {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left:30%;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* margin-right: 50%; */
+}
+.btn_smt a:hover, .btn_rst a:hover{
+    color: rgb(88, 87, 87);
+    cursor: pointer;
+}
+.btn_smt a:visited, .btn_rst a:visited{
+    color: royalblue;
+    cursor: pointer;
+}
+input[type = "submit"]{ 
+    background-color: whitesmoke;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    font-size: 17px;
+}
+input[type = "reset"]{ 
+    margin-top: 5px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    font-size: 17px;
+}
+#call, #mail{
+    margin-top: 20px;
+    margin-left: 17px;
+    font-size: 23px;
+}
+.gif{
+    display: flex;
+    position: absolute;
+    right: 0px;
+    width: 15%;
+    height: 300px;
+    margin-right: 40px;
+}
+
+.copy{
+    margin: 10px 20px;
+    color: white;
+}
+footer{
+    background-color:#66bfbf5a;
+    padding: 50px 0 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.foot_link{
+    text-decoration: none;
+    color: rgb(94, 147, 155);
+    margin: 10px 20px;
+}
+.foot_link:hover{
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a, img{
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+}

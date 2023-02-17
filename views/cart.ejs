@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your Cart</title>
+        <link rel = "icon" href = "photos/logo2.png" type = "image/x-icon">
+        <link rel="stylesheet" href="css/cart.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <%- include ("partials/header.ejs") -%> 
+    <body>
+        <!-- <div id="empty-cart"> -->
+            <!-- <section class="empty-container">
+            <center>
+                <img src="photos/empty.png" alt="Empty Cart! :(" width="50%" height = "40%">
+                <h1>OOPS!! No Items In Cart..... :-(<br></h1>
+                <span><h2>KEEP SHOPPING :-)&nbsp;
+                <a href = "/"> <input class = "btn_shop" type="button" value = "+"></a>
+                </h2></span>
+            </center>
+            </section> -->
+        <!-- </div> -->
+        
+        <div id="non-empty ">
+            <section class="container content-section">
+                <h2 class="section-header">CART</h2>
+                <div class="cart-row">
+                    <strong class="cart-item cart-header cart-column col-1">&nbsp; PRODUCT</strong>
+                    <strong class="cart-price cart-header cart-column">&nbsp; PRICE</strong>
+                    <strong class="cart-quantity cart-header cart-column">&nbsp; QUANTITY</strong>
+                
+                </div>
+                
+                <div class="cart-items"></div>
+                
+                <div class = "cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">₹ 0</span>
+                </div>
+                <button id = "bp" class = "btn btn-primary btn-purchase" type="button" >PURCHASE</button>
+            </section>
+        </div>
+        <script src = "/cart.js"></script>
+        <%- include("partials/footer"); -%>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wishlist</title>
+        <link rel = "icon" href = "photos/logo2.png" type = "image/x-icon">
+        <link href="css/wishlist.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%- include ("partials/header") -%> 
+    </head>
+    <body>
+        <div id="no-wish">
+            <!-- <center><img class = "nowish" src ="photos/nowish.png">
+                <a href = "/"> <input class = "btn_shop" type="button" value = "Start Shopping+"></a>
+            </center> -->
+        </div>
+
+        <div id="have-wish">
+            <section class="container content-section">
+                <div class = "wishlist-heading section-header wish-row">WISHLIST <div id="wishlist-count"> 0 </div></div>
+                
+                <div class="wished-items"></div>
+
+            </section>
+        </div>
+        <%- include("partials/footer"); -%>
+        <script src = "/wishlist.js"></script>
+        <script src = "/w2c.js"></script>
+    </body>
+</html>

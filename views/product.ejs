@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Products</title>
+        <link rel = "icon" href = "photos/logo2.png" type = "image/x-icon">
+        <link href="css/product.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <%- include("partials/header"); -%> 
+    <body>
+        <section class="container content-section">
+            <div class = "products shop-items">
+                <% items.female.forEach(function(item)  { %>
+                    <div class="product shop-item" >
+                        <span class="shop-item-id"><%=item.id %></span>
+                        <span class = "pname shop-item-title"><strong><%=item.name %></strong></span>
+                        <button id="btn-heart-<%= item.id %>" class = "btn-wishlisted heart" type = "button" style="float: right">&#10084;</button>
+                        <img class = "shop-item-image" src="photos/<%= item.imgName %>">
+                        <br>
+                        <div class="shop-item-details">
+                            <span class = "shop-item-price"> ₹ <%= item.price%></span>
+                            <button class="btn btn-primary shop-item-button btn-cart" type="button" style="float: right" >ADD TO CART </button>
+                        </div> 
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+        <%- include("partials/footer"); -%>
+        <script src = "/cart.js"></script>
+        <script src = "/wishlist.js"></script>
+    </body>
+</html>

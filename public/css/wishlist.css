@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
+         url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+html, body{
+    box-sizing: border-box;
+    font-family: Raleway;
+    background-color: rgb(193, 224, 228);
+}
+*{margin: 0;
+    box-sizing: border-box;}
+
+.navbar { 
+    width: 100%;
+    background-color: #a1a1a1;
+    overflow: hidden;
+    position: fixed;
+} 
+.navbar a{
+    text-decoration: none;
+    font-size: 20px;
+    float: left;
+    text-align: center;
+    padding:  12px;
+    color: white;
+    width: 20%;
+}
+.navbar a:hover{
+    color: black;
+    cursor: pointer;
+}
+.container{
+    padding-top: 80px;
+    padding-bottom: 70%;
+}
+.content-section{
+    margin-bottom: 50px;
+}
+img{
+    margin: auto 0;
+    max-height: 65%;
+    width: auto;
+    padding: 15px 20%;
+    display: block;
+    /* width: 100%; */
+}
+.wished-items{
+    margin-left: 65px;
+    /* margin-bottom: 50px; */
+}
+.wished-item{
+    /* display: inline-block; */
+    width:20%;
+    height:360px;
+    margin: 25px 35px 50px 15px;
+    /* background-color: whitesmoke; */
+    background-color: #E4E9FD; 
+    background-image: -webkit-linear-gradient(-25deg,  white 50%, rgb(193, 224, 228));
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 10px 10px 10px 10px;
+    float: left;
+} 
+.wished-item:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.btn-cart {
+    /* border: none; */
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    
+    border-color: black;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: rgb(245, 239, 231);
+}
+.btn-cart:hover, .btn-cross:hover{
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
+}
+.btn-cross:hover{
+    color: rgb(178, 83, 83);
+}
+.wname{
+    padding-left: 20px;
+}
+
+.section-header{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.55em;
+    color: #333;
+}
+.wishlist-heading{
+    text-align: center;
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+#wishlist-count{
+    font-family: Raleway;
+    font-weight: normal;
+    color: #333;
+    font-size: 22px;
+}
+.btn-cross{
+    border:none;
+    border-radius: 50%;
+}
+
+.btn_shop{
+    text-decoration: none;
+    background-color: rgb(76, 76, 213);
+    /* background-color: #A683E3; */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 19px;
+    display: flex;
+    float: center;
+    margin-top: 30px;
+    opacity: 0.9;
+    transition: 0.3s;
+    border-radius: 7px;
+}
+/* .btn_shop {
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #A683E3;
+    color: #fff;
+    font-size: 30px;
+    padding-bottom: 5px;
+    border-width: 0;
+    transition: 0.3s;
+} */
+.btn_shop:hover{
+    cursor: pointer;
+    background-color: rgb(24, 24, 74);
+    box-shadow: 2px;
+}
+
+.nowish{
+    opacity: 0.5;
+}
+
+.copy{
+    margin: 10px 20px;
+    color: white;
+}
+footer{
+    background-color:#66bfbf5a;
+    padding: 50px 0 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.foot_link{
+    text-decoration: none;
+    color: rgb(94, 147, 155);
+    margin: 10px 20px;
+}
+.foot_link:hover{
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a, img{
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel = "icon" href = "photos/logo2.png" type = "image/x-icon">
+        <link href = "css/contact.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <header>
+        <div class = "navbar">
+            <a href = "/home.html"><i class="fa fa-home"></i> Home </a>
+            <a href = "/cart.html"><i class="fa fa-shopping-cart" style="font-size:20px"></i>&nbsp; Cart <span id="cart-count"> 0 </span> </a>
+            <a href = "/wishlist.html"><i class="fa fa-heart" style="font-size:19px;"></i> Wishlist </a>
+            <a href = "/contact.html"><i class="fa fa-phone" style="font-size:20px"></i> Contact </a>
+            <a href = "/faq.html"><i class="fa fa-question-circle" style="font-size:20px"></i> FAQ </a>
+        </div>
+    </header>
+    <body>
+        <div class="container">
+            <h1 class="main">Happy To Serve You!</h1>
+            <p id = "mail">1. &nbsp;Contact us via a mail</p><br>
+            <!-- <img class = "gif" src = "photos/oshop.gif"> -->
+
+            <form id = "form" action="/rv/contact" method="post" enctype="text/plain">
+                Name*:<br><br>
+                <input id = "name_bar" type="text" name="name" required autofocus><br><br><br>
+                E-mail*:<br><br>
+                <input id = "mail_bar" type="text" name="mail" required><br><br><br>
+                Comment:<br><br>
+                <div>
+                    <textarea id = "query" name = "query" title="Please enter your query..." textarea ></textarea>
+                </div>
+                <a><input class = "btn_smt" type="submit"></a>
+                <a><input class = "btn_rst" type="reset" value="Reset"></a>
+                <br><br>
+            </form>
+            <p id = "call">2. &nbsp; You can call us now... <a href="tel:822-695-5101">Call us now</a></p>
+        </div>
+        <footer>
+            <div class = "bottom" >
+                <a class = "foot_link" href = "#">Twitter</a> 
+                <a class = "foot_link" href = "#"> Facebook</a> 
+                <a class = "foot_link" href = "/contact">Mail</a>
+                
+                <p class = "copy"> &#169; Priyasha Parnavi &nbsp; @2022 </p>
+            </div>
+        </footer>
+    </body>
+</html>
