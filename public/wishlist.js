@@ -16,7 +16,7 @@ function ready(){
         wishlist = [];
         localStorage.setItem("productsInWishlist", JSON.stringify(wishlist));
     }
-    // console.log("Initial wishlist on Load: ", wishlist);
+    console.log("Initial wishlist on Load: ", wishlist);
 
     var addToWishlistButtons = document.querySelectorAll(`.btn-wishlisted`);
     for (var i = 0; i < addToWishlistButtons.length; i++) {
@@ -80,11 +80,6 @@ function addItemToWishlist(id, title, price, imageSrc) {
         for (var i = 0; i < wishlistItemsOld.length; i++) {
             if (wishlistItemsOld[i].id == id) {
                 alert("Item already in Wishlist!.");
-                // console.log("Updated Wishlist: ", wishlist);
-                // console.log(typeof wishlist);
-
-            
-                // localStorage.setItem("productsInWishlist", JSON.stringify(wishlistItemsOld));
                 alreadyInWishlist = true;
                 return;
             }
@@ -97,15 +92,12 @@ function addItemToWishlist(id, title, price, imageSrc) {
         // setCartCount();
         //do the dom manipulation after this to add the item to the cart
     }
-    
-    // addWishlistItemsToDOM();
 }
 
 if (window.location.pathname == "/wishlist") {
     //do stuff
     console.log("in wishlist.html");
     addWishlistItemsToDOM();
-    // wishlistItemsDivs();
 }
 
 function addWishlistItemsToDOM() {
@@ -153,7 +145,7 @@ function wishlistItemsDivs(id, title, price, imageSrc) {
 function removeWishlistItem(event) {
     var buttonClicked = event.target;
     var wishlistItems = JSON.parse(localStorage.getItem("productsInWishlist"));
-    console.log(buttonClicked.parentElement.className);
+    //console.log(buttonClicked.parentElement.className);
     var title = buttonClicked.parentElement.getElementsByClassName("wished-item-title")[0].innerText;
     title = title.replaceAll('"', "");
     // console.log("parent title", title);
