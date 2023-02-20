@@ -42,7 +42,7 @@ html, body{
 
 .search-bar{
     width: 35%;
-    margin: 50px 0 12px auto;
+    margin: 50px 0 20px auto;
     overflow: hidden;
     position: fixed;
 }
