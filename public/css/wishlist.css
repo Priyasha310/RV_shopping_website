@@ -21,6 +21,7 @@ html, body{
     background-color: #a1a1a1;
     overflow: hidden;
     position: fixed;
+    z-index: 1;
 } 
 .navbar a{
     text-decoration: none;
@@ -158,6 +159,9 @@ img{
     cursor: pointer;
     background-color: rgb(24, 24, 74);
     box-shadow: 2px;
+}
+#no-wish{
+    z-index: -1;
 }
 
 .nowish{
