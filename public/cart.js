@@ -158,28 +158,52 @@ function addCartItemsToDOM() {
     updateCartTotal();
 }
 function addCartItemsDivs(id, title, price, imageSrc, quantity) {
+    var cartStoredItems = JSON.parse(localStorage.getItem("cartItems"));
+
     var cartRow = document.createElement("div");
-    cartRow.innerText = title;
     cartRow.classList.add("cart-row");
 
     var cartItems = document.getElementsByClassName("cart-items")[0];
 
-    var cartRowContents = `
-        <div class="cart-item cart-column col-1">
-            <span class="cart-item-id" style = "font-size:0">${id}</span>
-            <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
-            <span class="cart-item-title">${title}</span>
-        </div>
-        <span class="cart-price cart-column">&nbsp; ${price}</span>
-        <div class="cart-quantity cart-column">
-            <input class = "cart-item-quantity"  type = "number" value = ${quantity}>
-            <button class="btn-remove"  type = "button">REMOVE</button>
-        </div>`;
+    
+    if(cartStoredItems.length == 0 && cartStoredItems == undefined){
+        
+        var a = document.getElementById("non-empty");
+        a.replaceChildren();
+        var cartRowContents = `
+        <center>
+            <img src="photos/empty.png" alt="Empty Cart! :(" width="50%" height = "40%">
+            <h1>OOPS!! No Items In Cart..... :-(<br></h1>
+            <span><h2>KEEP SHOPPING :-)&nbsp;
+            <a href = "/"> <input class = "btn_shop" type="button" value = "+"></a>
+            </h2></span>
+        </center>
+        `
+        cartRow.innerHTML = cartRowContents;
+        cartItems.appendChild(cartRow);
 
-    cartRow.innerHTML = cartRowContents;
-    cartItems.appendChild(cartRow);
-    cartRow.getElementsByClassName("btn-remove")[0].addEventListener("click", removeCartItem);
-    cartRow.getElementsByClassName("cart-item-quantity")[0].addEventListener("change", quantityChanged);
+    }
+    else{
+        var cartRowContents = 
+            `<div class="cart-item cart-column col-1">
+                <span class="cart-item-id" style = "font-size:0">${id}</span>
+                <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+                <span class="cart-item-title">${title}</span>
+            </div>
+            <span class="cart-price cart-column">&nbsp; ${price}</span>
+            <div class="cart-quantity cart-column">
+                <input class = "cart-item-quantity"  type = "number" value = ${quantity}>
+                <button class="btn-remove"  type = "button">REMOVE</button>
+            </div>`;
+
+        const myNode = document.getElementById("empty-cart");
+        myNode.innerHTML = '';
+
+        cartRow.innerHTML = cartRowContents;
+        cartItems.appendChild(cartRow);
+        cartRow.getElementsByClassName("btn-remove")[0].addEventListener("click", removeCartItem);
+        cartRow.getElementsByClassName("cart-item-quantity")[0].addEventListener("change", quantityChanged);
+    }
 }
 
 function updateCartTotal() {
