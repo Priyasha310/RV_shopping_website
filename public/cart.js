@@ -166,24 +166,24 @@ function addCartItemsDivs(id, title, price, imageSrc, quantity) {
     var cartItems = document.getElementsByClassName("cart-items")[0];
 
     
-    if(cartStoredItems.length == 0 && cartStoredItems == undefined){
+//     if(cartStoredItems.length == 0 && cartStoredItems == undefined){
         
-        var a = document.getElementById("non-empty");
-        a.replaceChildren();
-        var cartRowContents = `
-        <center>
-            <img src="photos/empty.png" alt="Empty Cart! :(" width="50%" height = "40%">
-            <h1>OOPS!! No Items In Cart..... :-(<br></h1>
-            <span><h2>KEEP SHOPPING :-)&nbsp;
-            <a href = "/"> <input class = "btn_shop" type="button" value = "+"></a>
-            </h2></span>
-        </center>
-        `
-        cartRow.innerHTML = cartRowContents;
-        cartItems.appendChild(cartRow);
+//         var a = document.getElementById("non-empty");
+//         a.replaceChildren();
+//         var cartRowContents = `
+//         <center>
+//             <img src="photos/empty.png" alt="Empty Cart! :(" width="50%" height = "40%">
+//             <h1>OOPS!! No Items In Cart..... :-(<br></h1>
+//             <span><h2>KEEP SHOPPING :-)&nbsp;
+//             <a href = "/"> <input class = "btn_shop" type="button" value = "+"></a>
+//             </h2></span>
+//         </center>
+//         `
+//         cartRow.innerHTML = cartRowContents;
+//         cartItems.appendChild(cartRow);
 
-    }
-    else{
+//     }
+//     else{
         var cartRowContents = 
             `<div class="cart-item cart-column col-1">
                 <span class="cart-item-id" style = "font-size:0">${id}</span>
@@ -196,14 +196,14 @@ function addCartItemsDivs(id, title, price, imageSrc, quantity) {
                 <button class="btn-remove"  type = "button">REMOVE</button>
             </div>`;
 
-        const myNode = document.getElementById("empty-cart");
-        myNode.innerHTML = '';
+//         const myNode = document.getElementById("empty-cart");
+//         myNode.innerHTML = '';
 
         cartRow.innerHTML = cartRowContents;
         cartItems.appendChild(cartRow);
         cartRow.getElementsByClassName("btn-remove")[0].addEventListener("click", removeCartItem);
         cartRow.getElementsByClassName("cart-item-quantity")[0].addEventListener("change", quantityChanged);
-    }
+//     }
 }
 
 function updateCartTotal() {
