@@ -116,30 +116,36 @@ function addWishlistItemsToDOM() {
 }
 
 function wishlistItemsDivs(id, title, price, imageSrc) {
+    var wishlistItems = JSON.parse(localStorage.getItem("productsInWishlist"));
 
     let newWish = document.createElement("div");
     newWish.innerText = title;
     newWish.className = "wished-item";
 
     var wishedItems = document.getElementsByClassName("wished-items")[0];
-    
-    var wishedContents = `
-        <span class="wished-item-id" style = "font-size:0">${id}</span>
-        <span class = "wname wished-item-title"><strong>${title}</strong></span>
-        <button class = "btn-cross" type = "button" style="float: right"> &#10006; </button>
-        <img class = "wished-item-image" src="${imageSrc}">
-        <br>
-        <div class="wished-item-details">
-            <span class = "wished-item-price">  ${price}</span>
-            <button  class="btn btn-primary wish-to-cart btn-cart" type="button" style="float: right" >ADD TO CART </button>
+    // var nowishedItems = document.getElementsByClassName("no-wished-items")[0];
         
-    </div>`;
+    if(wishlistItems.length > 0){
+        var wishedContents = `
+            <span class="wished-item-id" style = "font-size:0">${id}</span>
+            <span class = "wname wished-item-title"><strong>${title}</strong></span>
+            <button class = "btn-cross" type = "button" style="float: right"> &#10006; </button>
+            <img class = "wished-item-image" src="${imageSrc}">
+            <br>
+            <div class="wished-item-details">
+                <span class = "wished-item-price">  ${price}</span>
+                <button  class="btn btn-primary wish-to-cart btn-cart" type="button" style="float: right" >ADD TO CART </button>
+            
+        </div>`;
 
-    newWish.innerHTML = wishedContents;
-    wishedItems.appendChild(newWish);
+        const myNode = document.getElementById("no-wish");
+        myNode.innerHTML = '';
+        newWish.innerHTML = wishedContents;
+        wishedItems.appendChild(newWish);
 
-    console.log("displaying wishlist");
-    
+        console.log("displaying wishlist");
+    }
+   
 }
     
 function removeWishlistItem(event) {
