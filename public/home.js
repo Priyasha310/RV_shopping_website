@@ -185,197 +185,15 @@ function ready(){
     }
 }
 
-// // function search() {
-// //     let input = document.getElementById("search-input").value;
-// //     input = input.toUpperCase();
-// //     var searchStrings = str_needle.split(/\W/);
-    
-// //     let cards = document.querySelectorAll(".shop-item-title");
-// //     for(var j=0, divsLen = cards.length; j<divsLen; j++){
-// //         var match = 0;
-// //         for(var i=0, len = searchStrings.length; i<len; i++){
-// //             var curr = searchStrings[i].toUpperCase();
-// //             if(input !== ""){
-// //                 if(cards[j].textContent.toUpperCase().indexOf(curr) !== -1){
-// //                     match++;
-// //                 }
-// //                 if(match == searchStrings.length){
-// //                     cards[j].style.display = "block";
-// //                 }
-// //             }
-// //         }
-// //     }
-// // }
-
-// // function s(){
-// //     var input = document.getElementById("search-input").value;
-// //     input.toUpperCase();
-// //     var match = 0;
-// //     for(var i in items){
-// //         if(input == items[i].name){
-// //             match += 1;
-// //             document.getElementById("")
-// //         }
-// //     }
-// // }
-
-// // function search(event) {
-// //     var button = event.target;
-// //     var wishedItem = button.parentElement;
-// //     var id = wishedItem.getElementsByClassName("shop-item-id")[0].innerText;
-// //     var title = wishedItem.getElementsByClassName("shop-item-title")[0].innerText;
-// //     var price = wishedItem.getElementsByClassName("shop-item-price")[0].innerText;
-// //     var imageSrc = wishedItem.getElementsByClassName("shop-item-image")[0].src;
-// //     console.log(id, title, price, imageSrc);
-// //     addToSearchResult(id, title, price, imageSrc);
-// // }
-
-// // function ready(){
-// //     var searchButton = document.getElementsByClassName("btn-search");
-// //     for (var i = 0; i < searchButton.length; i++) {
-// //         var button = searchButton[i];
-// //         button.addEventListener("click", searchButtonClicked);
-// //     }
-// // }
-
-// function searchButtonClicked() {
-//     var searchedItem = document.getElementById("search-input").value;
-//     // console.log(searchedItem);
-
-//     for(var i in items){
-//         var title = items[i].name;
-//         title = title.toLowerCase();
-//         if(searchedItem == items[i].name){
-//             var id = items[i].id;
-//             var imageSrc = items[i].imgName;
-//             var price = items[i].price;
-//             console.log("matched");
-//             searchDisplay(title, id, imageSrc, price);
-//         }
-//     }    
-// }
-
-// function searchDisplay(title, id, imageSrc, price) {
-//     let res = document.createElement("div");
-//     res.className = "match";
-    
-//     var container = document.getElementsByClassName("matches")[0];
-    
-//         var containerContents= `
-//             <span class="shop-item-id">${id}</span>
-//             <span class = "pname shop-item-title"><strong>${title}</strong></span>
-//             <button class = "btn-wishlisted heart" type = "button" style="float: right">&#10084;</button>
-//             <img class = "shop-item-image" src="photos/${imageSrc}">
-//             <br>
-//             <div class="shop-item-details">
-//                 <span class = "shop-item-price">${price}></span>
-//                 <button class="btn btn-primary shop-item-button btn-cart" type="button" style="float: right" >ADD TO CART </button>
-//             </div> 
-//         `
-    
-//     res.innerHTML = containerContents;
-//     container.appendChild(res);
-// }
-
-// document.querySelector('btn-search').addEventListener('click', (e) => {
-//     e.preventDefault();
-//     const searchInput = document.querySelector('#search-input').value.toLowerCase();
-    
-    
-//     var searchedItem = document.getElementById("search-input").value;
-//     for(var i in items){
-//         if(items[i].name === searchedItem){
-//             fetch('/', {
-//                 method: 'POST',
-//                 headers: {
-//                     Authorization: 'Bearer abcdxyz',
-//                     'Content-Type': 'application/json',
-//                 },
-//                 body: JSON.stringify({
-//                     searchInput
-//                 }),
-//             })
-//             .then((res) => {
-//                 return res.json();
-//             })
-//             .then((data) => console.log(data));
-//         }
-//     }
-//     // fetch('/', {
-//     //     method: 'POST',
-//     //     headers: {
-//     //         Authorization: 'Bearer abcdxyz',
-//     //         'Content-Type': 'application/json',
-//     //     },
-//     //     body: JSON.stringify({
-//     //         searchInput
-//     //     }),
-//     // })
-//     // .then((res) => {
-//     //     return res.json();
-//     // })
-//     // .then((data) => console.log(data));
-// });
-
-    // var title = document.getElementsByClassName("shop-item-title")[0].innerText;
-
-    // window.location = "/search" + input;
-    // var container = document.getElementById("results")[0];
-    // var containerContents = `
-    //     <div class="product shop-item" >
-    //         <span class="shop-item-id">${id}</span>
-    //         <span class = "pname shop-item-title"><strong>${title}</strong></span>
-    //         <button id="btn-heart-${id}" class = "btn-wishlisted heart" type = "button" style="float: right">&#10084;</button>
-    //         <img class = "shop-item-image" src="${imageSrc}">
-    //         <br>
-    //         <div class="shop-item-details">
-    //             <span class = "shop-item-price"> ${price}</span>
-    //             <button class="btn btn-primary shop-item-button btn-cart" type="button" style="float: right" >ADD TO CART </button>
-    //         </div> 
-    //     </div>`
-    
-    // res.innerHTML = containerContents;
-    // container.appendChild(res);
-    // return false;
-//way:
-// let http = XMLHttpRequest();
-
-// http.open('get', 'items.json', true);
-
-// http.send();
-
-// http.onload  = function search(){
-//     if(this.readyState == 4 && this.status == 200){
-//         let items = JSON.parse(this.responseText);
-
-//         let output = "";
-
-//         for(let item of items){
-//             output += `
-//             <div class="product shop-item match" >
-//             <span class="shop-item-id">${item.id}</span>
-//             <span class = "pname shop-item-title"><strong>${item.name}</strong></span>
-//             <button id="btn-heart-${item.id}" class = "btn-wishlisted heart" type = "button" style="float: right">&#10084;</button>
-//             <img class = "shop-item-image" src="photos/${item.imgName}">
-//             <br>
-//             <div class="shop-item-details">
-//                 <span class = "shop-item-price"> ${item.price}</span>
-//                 <button class="btn btn-primary shop-item-button btn-cart" type="button" style="float: right" >ADD TO CART </button>
-//             </div> 
-//         </div>`
-//         }
-//         document.querySelector(".matches").innerHTML = output;
-//     }
-// }
-
 function search(){
     
     let matchItem = document.createElement("div");
     matchItem.className = "matched-item";
 
-    var searchInput = document.getElementById("search-input").value.toLowerCase();
+    var searchInput = document.getElementById("search-input").value.toUpperCase();
     var match_cnt = 0;
     var container = document.getElementsByClassName("matches")[0];
+    var hc = document.getElementsByClassName("home-content")[0];
 
     for(var i in products){
         
@@ -383,12 +201,12 @@ function search(){
         var imgName = products[i].imgName;
         var title = products[i].name;
         var price = products[i].price;
-        if (searchInput == title.toLowerCase()){
+        if (searchInput == title.toUpperCase()){
             match_cnt += 1;
 
             var containerContents = `
-                <span id="match-item-id">${id}</span>
-                <span id = "pname match-item-title"><strong>${name}</strong></span>
+                <span id="match-item-id" style = "font-size: 0">${id}</span>
+                <span id = "pname match-item-title"><strong>${title}</strong></span>
                 <button id = "btn-wishlisted heart" type = "button" style="float: right">&#10084;</button>
                 <img id = "match-item-image" src="photos/${imgName}">
                 <br>
@@ -397,17 +215,11 @@ function search(){
                     <button class="btn btn-primary shop-item-button btn-cart" type="button" style="float: right" >ADD TO CART </button>
                 </div> 
             `
+            // hc.innerHTML = '';
             matchItem.innerHTML = containerContents;
             container.appendChild(matchItem);
             
             console.log(id, price, title, imgName);
-            // document.getElementById("match-item-id").innerText = products[i].id;
-            // document.getElementById("match-item-name").innerText = products[i].name;
-            // document.getElementById("match-item-image").src = "photos"+ awqproducts[i].imgName;
-            // document.getElementById("match-item-price").innerText = products[i].price;
         }
-        // else{
-        //     container.innerText = "NO PRODUCTS";
-        // }
     }
 }
