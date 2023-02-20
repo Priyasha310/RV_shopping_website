@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title> RV Stop</title>
+        <link rel = "icon" href = "/photos/logo2.png" type = "image/x-icon">
+        <link href="css/home.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <%- include("partials/header"); -%>
+    <body>
+        <div class="matches" id="results">
+        <div class="product shop-item matched-item" >
+            <span id="match-item-id"></span>
+            <span id = "pname match-item-title"><strong></strong></span>
+            <button id = "btn-wishlisted heart" type = "button" style="float: right">&#10084;</button>
+            <img id = "match-item-image" src="photos/">
+            <br>
+            <div class="match-item-details">
+                <span class = "match-item-price"></span>
+                <button class="btn btn-primary match-item-button btn-cart" type="button" style="float: right" >ADD TO CART </button>
+            </div> 
+        </div>
+        </div>
+
+        <%- include("partials/footer"); -%>
+        <script src = "/cart.js"></script>        
+    </body>
+</html>
