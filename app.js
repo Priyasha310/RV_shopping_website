@@ -67,17 +67,6 @@ app.get("/cart", function(req, res){
     })
 });
 app.get("/wishlist", function(req, res){
-    // fs.readFile('items.json', function(error, data){
-    //     if(error){
-    //         res.status(500).end()
-    //     }
-    //     else{
-    //         res.render('wishlist', {
-    //             // stripePublicKey: stripePublicKey,
-    //             items: JSON.parse(data)
-    //         })
-    //     }
-    // });
     res.render("wishlist");
 });
 app.get("/contact", function(req, res){
@@ -85,6 +74,19 @@ app.get("/contact", function(req, res){
 });
 app.get("/faq", function(req, res){
     res.render("faq");
+});
+app.get("/search", function(req, res){
+    fs.readFile('items.json', function(error, data){
+        if(error){
+            res.status(500).end()
+        }
+        else{
+            res.render('search', {
+                // stripePublicKey: stripePublicKey,
+                items: JSON.parse(data)
+            })
+        }
+    })
 });
 
 app.post("/contact", function(req, res){

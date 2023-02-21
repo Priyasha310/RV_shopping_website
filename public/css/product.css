@@ -30,7 +30,7 @@ html, body{
     text-align: center;
     padding:  12px;
     color: white;
-    width: 20%;
+    width: 16%;
 }
 .navbar a:hover{
     color: black;
@@ -51,7 +51,44 @@ img{
     display: block;
     /* width: 100%; */
 }
+.search-bar{
+    width: 35%;
+    margin: 50px 0 20px auto;
+    overflow: hidden;
+    position: fixed;
+}
+#search-input {
+    /* background-image: url('/photos/search.png');  */
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 85%;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    float: left;
+}
+.btn-search{    
+    float: left; 
+    width: 15%;
+    height: 40px;
+    padding: 10px;
+    background:  rgb(108, 192, 203);
+    color: white;
+    font-size: 17px;
+    border: 1px solid #ddd;
+    border-left: none;
+    cursor: pointer;
+}
 
+.btn-search:hover {
+    background: #0b7dda;
+    border: 1px solid black;
+}
+.btn-search::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 .products{
     margin-left: 65px;
     /* margin-bottom: 50px; */
