@@ -19,6 +19,16 @@
         </div>
     </header>
     <body>
+                
+        <br><div class="search-bar">
+            <!-- <form class="search-bar" method = "post" action="/search">  -->
+                <input id = "search-input" type="text" placeholder="Search for clothing.." name="search" autocomplete="off" onkeyup="search();" >
+                <button onclick="search();" class="btn-search fa fa-search"></button>
+            <!-- </form> -->
+        </div><br>
+
+        <div class="matches" id="results"></div>
+        
         <footer>
         <div class = "bottom" >
             <a class = "foot_link" href = "#">Twitter</a> 
