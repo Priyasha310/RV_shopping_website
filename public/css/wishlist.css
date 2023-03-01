@@ -30,18 +30,24 @@ html, body{
     text-align: center;
     padding:  12px;
     color: white;
-    width: 20%;
+    width: 16%;
 }
 .navbar a:hover{
     color: black;
     cursor: pointer;
 }
+
+/*///////////////////////////content style///////////////////////*/
 .container{
     padding-top: 80px;
-    padding-bottom: 70%;
+    margin-bottom: 70%;
 }
-.content-section{
-    margin-bottom: 50px;
+.section-header{
+    text-align: center;
+    font-family: "Metal Mania";
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #333;
 }
 img{
     margin: auto 0;
@@ -49,18 +55,15 @@ img{
     width: auto;
     padding: 15px 20%;
     display: block;
-    /* width: 100%; */
 }
 .wished-items{
     margin-left: 65px;
-    /* margin-bottom: 50px; */
 }
 .wished-item{
     /* display: inline-block; */
     width:20%;
     height:360px;
     margin: 25px 35px 50px 15px;
-    /* background-color: whitesmoke; */
     background-color: #E4E9FD; 
     background-image: -webkit-linear-gradient(-25deg,  white 50%, rgb(193, 224, 228));
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -84,8 +87,7 @@ img{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    cursor: pointer;
-    
+    cursor: pointer; 
     border-color: black;
     border-width: 1px;
     border-radius: 5px;
@@ -101,20 +103,6 @@ img{
     padding-left: 20px;
 }
 
-.section-header{
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.55em;
-    color: #333;
-}
-.wishlist-heading{
-    text-align: center;
-    font-family: "Metal Mania";
-    font-weight: normal;
-    color: #333;
-    text-align: center;
-    font-size: 2.5em;
-}
 #wishlist-count{
     font-family: Raleway;
     font-weight: normal;
@@ -125,16 +113,13 @@ img{
     border:none;
     border-radius: 50%;
 }
-
 .btn_shop{
     text-decoration: none;
     background-color: rgb(76, 76, 213);
-    /* background-color: #A683E3; */
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
     font-size: 19px;
     display: flex;
     float: center;
@@ -143,18 +128,6 @@ img{
     transition: 0.3s;
     border-radius: 7px;
 }
-/* .btn_shop {
-    min-height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border-color: transparent;
-    background-color: #A683E3;
-    color: #fff;
-    font-size: 30px;
-    padding-bottom: 5px;
-    border-width: 0;
-    transition: 0.3s;
-} */
 .btn_shop:hover{
     cursor: pointer;
     background-color: rgb(24, 24, 74);
@@ -163,11 +136,11 @@ img{
 #no-wish{
     z-index: -1;
 }
-
 .nowish{
     opacity: 0.5;
 }
 
+/*///////////////////////////footer style///////////////////////*/
 .copy{
     margin: 10px 20px;
     color: white;
