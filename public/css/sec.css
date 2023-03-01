@@ -1,0 +1,44 @@
+
+body {
+    background-color: #E8ECEF;
+  }
+  
+  .centered {
+      padding-top: 150px;
+      text-align: center;
+  }
+  
+  .secret-text {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #000;
+  }
+
+.copy{
+    margin: 0 20px;
+    color: white;
+}
+footer{
+    background-color:#66bfbf5a;
+    padding: 50px 0 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.foot_link{
+    text-decoration: none;
+    color: rgb(94, 147, 155);
+    margin: 10px 20px;
+}
+.foot_link:hover{
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a, img{
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+}
